@@ -1,8 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with the option --typescript enabled
+as there is official support for typescript starting with version 2.1.
 
-## Available Scripts
+## What does this app do 
 
-In the project directory, you can run:
+Upon running the application the app fetches some data from the following url <https://itunes.apple.com/us/rss/topalbums/limit=100/json>.
+It then presents the data to the user. The user has the option to filter by category, by clicking on the menu to the left.
+The dimensions (width and height) of the main component are fixed because it followed a layout requirement.
+
+This showcases how to use Typescript interfaces, both using state and props.
+
+Types for what the API returns can be found in the files `index.d.ts` inside the `types` directory.
+
+This project also leverages `node-sass` which can be installed by running `yarn add node-sass` from the command line.
+An alternative to this approach is to use `styled-components` which supports both SCSS syntax.
+
+To keep the project as lean and clean as possible, the API call is done with fetch and only the bootstrap styles were installed (not the react-bootstrap library).
 
 ### `npm start`
 
